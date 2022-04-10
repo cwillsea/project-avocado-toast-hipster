@@ -2,6 +2,7 @@
 //Variables for user input and computer input.
 let playerSelection;
 let computerSelection;
+let playerSelectionUpperCase = playerSelection.toUpperCase();
 //User will select avocado, toast, or hipster.
 //Computer will select avocado, toast, or hipster.
 const options = ['AVOCADO', 'TOAST', 'HIPSTER'];
@@ -22,8 +23,6 @@ console.log(computerSelection);
 function playRound (computerSelection, playerSelection) {
 
     let results;
-    
-    let playerSelectionUpperCase = playerSelection.toUpperCase();
 
     if (computerSelection === playerSelectionUpperCase) {
         return (`You Tie! You both picked ${playerSelection}.`);
