@@ -14,5 +14,7 @@ function computerPlay(array){
     return item;
 }
 
+console.log(computerSelection);
+
 //Script will compare the two values.
 //Script will return winner, loser, or tie.
