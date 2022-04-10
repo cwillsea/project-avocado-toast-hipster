@@ -4,7 +4,7 @@ let playerSelection;
 let computerSelection;
 //User will select avocado, toast, or hipster.
 //Computer will select avocado, toast, or hipster.
-const options = ['Avocado', 'Toast', 'Hipster'];
+const options = ['AVOCADO', 'TOAST', 'HIPSTER'];
 
 computerSelection = computerPlay(options);
 
@@ -20,14 +20,18 @@ console.log(computerSelection);
 //Script will return winner, loser, or tie.
 
 function playRound (computerSelection, playerSelection) {
+
     let results;
-    if (computerSelection === playerSelection) {
+    
+    let playerSelectionUpperCase = playerSelection.toUpperCase();
+
+    if (computerSelection === playerSelectionUpperCase) {
         return (`You Tie! You both picked ${playerSelection}.`);
-    } else if (computerSelection === 'Avocado' && playerSelection === 'Toast') {
+    } else if (computerSelection === 'Avocado' && playerSelectionUpperCase === 'Toast') {
         return (`You Lose! ${computerSelection} spreads over ${playerSelection}.`); 
-    } else if (computerSelection === 'Toast' && playerSelection === 'Avocado') {
+    } else if (computerSelection === 'Toast' && playerSelectionUpperCase === 'Avocado') {
         return (`You Win! ${playerSelection} spreads over ${computerSelection}.`);
-    } else if (computerSelection === 'Hipster' && playerSelection === 'Avocado'){
+    } else if (computerSelection === 'Hipster' && playerSelectionUpperCase === 'Avocado'){
         return (`You Lose! ${computerSelection} eats the ${playerSelection}.`);
     } else {
         (`You Win! ${computerSelection} eats the ${playerSelection}, but has a gluten allergy.`)
