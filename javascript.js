@@ -1,8 +1,12 @@
 //Create a script that plays rock paper scissors.
 //Variables for user input and computer input.
-let playerSelection;
+
+let playerSelection = window.prompt('Which do you decide: Avocado, Toast, or Hipster?', 'avocado');
+
+
 let computerSelection;
 let playerSelectionUpperCase = playerSelection.toUpperCase();
+console.log (`Player picked ${playerSelection}.`)
 //User will select avocado, toast, or hipster.
 //Computer will select avocado, toast, or hipster.
 const options = ['AVOCADO', 'TOAST', 'HIPSTER'];
@@ -15,9 +19,10 @@ function computerPlay(array){
     return item;
 }
 
-console.log(computerSelection);
+console.log(`Computer picked ${computerSelection}.`);
 
 //Script will compare the two values.
+console.log (playRound (computerSelection, playerSelection);
 //Script will return winner, loser, or tie.
 
 function playRound (computerSelection, playerSelection) {
@@ -36,3 +41,5 @@ function playRound (computerSelection, playerSelection) {
         (`You Win! ${computerSelection} eats the ${playerSelection}, but has a gluten allergy.`)
     }
 }
+
+//Game function to play multiple rounds.
