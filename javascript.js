@@ -22,22 +22,24 @@ function computerPlay(array){
 console.log(`Computer picked ${computerSelection}.`);
 
 //Script will compare the two values.
-console.log (playRound (computerSelection, playerSelection);
+console.log (playRound (computerSelection, playerSelectionUpperCase));
 //Script will return winner, loser, or tie.
 
 function playRound (computerSelection, playerSelection) {
 
     let results;
 
-    if (computerSelection === playerSelectionUpperCase) {
+    if (computerSelection === playerSelection) {
         return (`You Tie! You both picked ${playerSelection}.`);
-    } else if (computerSelection === 'Avocado' && playerSelectionUpperCase === 'Toast') {
+    } else if (computerSelection === 'Avocado' && playerSelection === 'Toast') {
         return (`You Lose! ${computerSelection} spreads over ${playerSelection}.`); 
-    } else if (computerSelection === 'Toast' && playerSelectionUpperCase === 'Avocado') {
+    } else if (computerSelection === 'Toast' && playerSelection === 'Avocado') {
         return (`You Win! ${playerSelection} spreads over ${computerSelection}.`);
-    } else if (computerSelection === 'Hipster' && playerSelectionUpperCase === 'Avocado'){
+    } else if (computerSelection === 'Hipster' && playerSelection === 'Avocado'){
         return (`You Lose! ${computerSelection} eats the ${playerSelection}.`);
-    } else {
+    } else if (computerSelection === 'Avocado' && playerSelection === 'Hipster'){
+        return (`You Win! ${playerSelection} eats the ${computerSelection}.`;
+    } else if ()
         (`You Win! ${computerSelection} eats the ${playerSelection}, but has a gluten allergy.`)
     }
 }
