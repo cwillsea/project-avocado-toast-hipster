@@ -6,7 +6,7 @@ let playerSelection = window.prompt('Which do you decide: Avocado, Toast, or Hip
 
 let computerSelection;
 let playerSelectionUpperCase = playerSelection.toUpperCase();
-console.log (`Player picked ${playerSelection}.`)
+console.log (`Player picked ${playerSelectionUpperCase}.`)
 //User will select avocado, toast, or hipster.
 //Computer will select avocado, toast, or hipster.
 const options = ['AVOCADO', 'TOAST', 'HIPSTER'];
@@ -25,22 +25,22 @@ console.log(`Computer picked ${computerSelection}.`);
 console.log (playRound (computerSelection, playerSelectionUpperCase));
 //Script will return winner, loser, or tie.
 
-function playRound (computerSelection, playerSelection) {
+function playRound (computer, player) {
 
-    let results;
-
-    if (computerSelection === playerSelection) {
+    if (computer === player) {
         return (`You Tie! You both picked ${playerSelection}.`);
-    } else if (computerSelection === 'Avocado' && playerSelection === 'Toast') {
-        return (`You Lose! ${computerSelection} spreads over ${playerSelection}.`); 
-    } else if (computerSelection === 'Toast' && playerSelection === 'Avocado') {
-        return (`You Win! ${playerSelection} spreads over ${computerSelection}.`);
-    } else if (computerSelection === 'Hipster' && playerSelection === 'Avocado'){
-        return (`You Lose! ${computerSelection} eats the ${playerSelection}.`);
-    } else if (computerSelection === 'Avocado' && playerSelection === 'Hipster'){
-        return (`You Win! ${playerSelection} eats the ${computerSelection}.`;
-    } else if ()
-        (`You Win! ${computerSelection} eats the ${playerSelection}, but has a gluten allergy.`)
+    } else if (computer === options[0] && player === options[1]) {
+        return (`You Lose! ${computer} spreads over ${player}.`); 
+    } else if (computer === options[1] && player === options[0]) {
+        return (`You Win! ${player} spreads over ${computer}.`);
+    } else if (computer === options[2] && player === options[0]){
+        return (`You Lose! ${computer} eats the ${player}.`);
+    } else if (computer === options[0] && player === options[2]){
+        return (`You Win! ${player} eats the ${computer}.`);
+    } else if (computer === options[1] && player === options[2]) {
+       return (`You Win! ${computer} eats the ${player}, but has a gluten allergy.`);
+    } else if (computer === options[2] && player === options[1]) {
+
     }
 }
 
