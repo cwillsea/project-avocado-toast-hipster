@@ -11,7 +11,7 @@ console.log (`Player picked ${playerSelectionUpperCase}.`)
 //Computer will select avocado, toast, or hipster.
 const options = ['AVOCADO', 'TOAST', 'HIPSTER'];
 
-computerSelection = computerPlay(options);
+computerSelection = computerPlay(options)
 
 function computerPlay(array){
     const randomIndex = Math.floor(Math.random() * array.length);
@@ -38,10 +38,10 @@ function playRound (computer, player) {
     } else if (computer === options[0] && player === options[2]){
         return (`You Win! ${player} eats the ${computer}.`);
     } else if (computer === options[1] && player === options[2]) {
-       return (`You Win! ${computer} eats the ${player}, but has a gluten allergy.`);
+       return (`You Lose! ${player} eats the ${computer}, but has a gluten allergy.`);
     } else if (computer === options[2] && player === options[1]) {
-
-    }
+        return (`You Win! ${computer} eats the ${player}, but has a gluten allergy.`)
+    } return "That wasn't one of the options... do you even want to play?"
 }
 
 //Game function to play multiple rounds.
