@@ -50,6 +50,14 @@ function playRound () {
 let computerScore = 0 ;
 let playerScore = 0;
 
+function gameResults() {
+    if (playerScore > computerScore) {
+        return "You Win the game!";
+    } else {
+        return "You Lose the game!"
+    }
+}
+
 function game() {
 
     for (let i = 0; i < 5; i++) {
@@ -63,12 +71,8 @@ function game() {
           console.log('The computer score is ' + computerScore)
       }
      }
-
-     if (playerScore > computerScore) {
-         console.log("You Win the game!");
-     } else {
-         console.log("You Lose the game!")
-     }
+     console.log(gameResults())
+   
 }
 
 game()
