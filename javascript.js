@@ -47,12 +47,10 @@ function playRound () {
 
 
 //Game function to play multiple rounds.
-
+let computerScore = 0 ;
+let playerScore = 0;
 
 function game() {
-
-    let computerScore = 0 ;
-    let playerScore = 0;
 
     for (let i = 0; i < 5; i++) {
       if (playRound().includes("You Win!")){
@@ -64,7 +62,12 @@ function game() {
           console.log('Your score is ' + playerScore);
           console.log('The computer score is ' + computerScore)
       }
-        
+     }
+
+     if (playerScore > computerScore) {
+         console.log("You Win the game!");
+     } else {
+         console.log("You Lose the game!")
      }
 }
 
