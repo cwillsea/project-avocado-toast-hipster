@@ -53,22 +53,34 @@ let playerScore = 0;
 function gameResults() {
     if (playerScore > computerScore) {
         return "You Win the game!";
-    } else {
+    } else if (playerScore < computerScore) {
         return "You Lose the game!"
+    } else {
+        return "You Tied! Would you look at that!"
     }
 }
 
 function game() {
 
     for (let i = 0; i < 5; i++) {
-      if (playRound().includes("You Win!")){
+        let roundResults = playRound();
+      if (roundResults.includes("You Win!")){
           playerScore++;
-          console.log('Your score is ' + playerScore);
-          console.log('The computer score is ' + computerScore)
-      } else {
+          console.log (roundResults);
+          console.log('\nYour score is ' + playerScore);
+          console.log('The computer score is ' + computerScore);
+          console.log ('\n')
+      } else if (roundResults.includes("You Lose!")) {
           computerScore++;
-          console.log('Your score is ' + playerScore);
-          console.log('The computer score is ' + computerScore)
+          console.log (roundResults);
+          console.log('\nYour score is ' + playerScore);
+          console.log('The computer score is ' + computerScore);
+          console.log ('\n')
+      } else {
+          console.log (roundResults);
+          console.log('\nYour score is ' + playerScore);
+          console.log('The computer score is ' + computerScore);
+          console.log ('\n');
       }
      }
      console.log(gameResults())
